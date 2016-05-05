@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.validation.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="505.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LOGINController">
+    <stylesheets>
+        <URL value="@/Styles/login.css" />
+    </stylesheets>
+   <children>
+      <JFXTextField layoutX="139.0" layoutY="150.0" maxWidth="262.0" minWidth="262.0" prefHeight="37.0" prefWidth="262.0" promptText="Tài khoản" />
+      <ImageView cacheHint="SPEED" fitHeight="30.0" fitWidth="30.0" layoutX="92.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/account.png" />
+         </image>
+      </ImageView>
+      <ImageView cacheHint="SPEED" fitHeight="30.0" fitWidth="30.0" layoutX="92.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/lock.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="287.0" layoutY="274.0" ripplerFill="WHITE" style="-fx-background-color: #03a9f4; -fx-background-radius: 0px;" text="ĐĂNG NHẬP" textFill="WHITE" textOverrun="CLIP" />
+      <JFXCheckBox layoutX="139.0" layoutY="243.0" text="Nhớ mật khẩu" />
+      <Label layoutY="-1.0" prefHeight="86.0" prefWidth="505.0" style="-fx-background-color: #3498db;" />
+      <ImageView fitHeight="151.0" fitWidth="151.0" layoutX="177.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/logo1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="177.0" layoutY="352.0" text="Phát triển bởi Hoàng Gia" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="139.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/tgh.png" />
+         </image>
+      </ImageView>
+      <JFXPasswordField layoutX="141.0" layoutY="198.0" maxWidth="262.0" minWidth="262.0" prefHeight="37.0" prefWidth="262.0" promptText="Mật khẩu" />
+   </children>
+</AnchorPane>
