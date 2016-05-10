@@ -5,26 +5,43 @@
  */
 package restaurant.manager;
 
+import Controller.*;
+import Dto.TAIKHOAN;
+import java.io.InputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
  * @author XaraRoyal
  */
 public class RestaurantManager extends Application {
+     
+    private Stage stage;
+    private TAIKHOAN tk;
+    private final double MINIMUM_WINDOW_WIDTH = 390.0;
+    private final double MINIMUM_WINDOW_HEIGHT = 500.0;
     
     @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/View/LOGIN.fxml"));
-        
-        Scene scene = new Scene(root);
-        
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage primaryStage) throws Exception {
+        try {
+            stage = primaryStage;
+            stage.setTitle("FXML Login Sample");
+            Login();
+            primaryStage.show();
+        } catch (Exception ex) {
+            Logger.getLogger(restaurant.manager.RestaurantManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -33,5 +50,40 @@ public class RestaurantManager extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+    private void Login() {
+            
+        try {
+            LOGINController login;
+            login = (LOGINController) replaceSceneContent("/View/LOGIN.fxml",Color.TRANSPARENT);
+            login.setapp(this);
+            stage.initStyle(StageStyle.TRANSPARENT);
+            
+        } catch (Exception ex) {
+            Logger.getLogger(RestaurantManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+    }
+    private Initializable replaceSceneContent(String fxml,Color t) throws Exception {
+        FXMLLoader loader = new FXMLLoader();
+        InputStream in = restaurant.manager.RestaurantManager.class.getResourceAsStream(fxml);
+        loader.setBuilderFactory(new JavaFXBuilderFactory());
+        loader.setLocation(restaurant.manager.RestaurantManager.class.getResource(fxml));
+        AnchorPane page;
+        try {
+            page = (AnchorPane) loader.load(in);
+        } finally {
+            in.close();
+        } 
+        Scene scene = new Scene(page);
+        scene.setFill(t);
+        stage.setScene(scene);
+        stage.sizeToScene();
+        return (Initializable) loader.getController();
+    }
+    public void close(){
+        stage.close();
+    }
+    public void minium(){
+        stage.setIconified(true);
+    }
 }
