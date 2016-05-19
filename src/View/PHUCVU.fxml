@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane style="-fx-border-color: gray;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PHUCVUController" >
+   <children>
+      <GridPane gridLinesVisible="true" layoutX="315.0" layoutY="-1.0" prefHeight="740.0" prefWidth="645.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="81.0" layoutY="14.0" prefHeight="21.0" prefWidth="215.0" text="HÓA ĐƠN BÁN HÀNG" textFill="#26c5da">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="360.0" layoutY="15.0" prefHeight="21.0" prefWidth="215.0" text="TÊN BÀN - PHÒNG" textFill="#ff992d">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="47.0" text="GIỜ VÀO" />
+                  <Label layoutX="81.0" layoutY="47.0" prefHeight="21.0" prefWidth="60.0" text="19:30" />
+                  <Label layoutX="14.0" layoutY="80.0" prefHeight="21.0" prefWidth="59.0" text="NGÀY " />
+                  <Label layoutX="81.0" layoutY="80.0" prefHeight="21.0" prefWidth="70.0" text="26/5/2016" />
+                  <Label layoutX="175.0" layoutY="47.0" text="MÃ KHÁCH" />
+                  <Label layoutX="174.0" layoutY="80.0" text="NHÂN VIÊN" />
+                  <JFXTextField layoutX="262.0" layoutY="32.0" maxWidth="187.0" minWidth="117.0" prefHeight="37.0" prefWidth="117.0" />
+                  <JFXTextField layoutX="262.0" layoutY="65.0" maxWidth="187.0" minWidth="117.0" prefHeight="37.0" prefWidth="117.0" />
+                  <Label layoutX="397.0" layoutY="47.0" text="NHÓM KH" />
+                  <JFXComboBox layoutX="473.0" layoutY="33.0" prefHeight="31.0" prefWidth="148.0" />
+                  <JFXTextField focusColor="#26c5da" layoutX="6.0" layoutY="102.0" maxWidth="262.0" minWidth="117.0" prefHeight="37.0" prefWidth="257.0" promptText="GHI CHÚ" unFocusColor="BLACK" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <JFXComboBox layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="253.0" promptText="CHỌN THỰC ĐƠN NHANH" />
+                  <JFXTextField layoutX="297.0" layoutY="14.0" maxWidth="247.0" minWidth="222.0" prefHeight="37.0" prefWidth="247.0" promptText="DÙNG MÃ THỰC ĐƠN" />
+                  <TableView layoutX="14.0" layoutY="66.0" prefHeight="265.0" prefWidth="620.0">
+                     <columns>
+                        <TableColumn prefWidth="50.0" text="STT" />
+                        <TableColumn prefWidth="185.0" text="TÊN MÓN" />
+                        <TableColumn minWidth="5.0" prefWidth="65.0" text="DVT" />
+                        <TableColumn prefWidth="105.0" text="GIÁ" />
+                        <TableColumn prefWidth="110.0" text="SỐ LƯỢNG" />
+                        <TableColumn prefWidth="104.0" text="GHI CHÚ" />
+                     </columns>
+                  </TableView>
+                  <JFXButton buttonType="RAISED" layoutX="536.0" layoutY="14.0" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #26c5da;" text="ÁP DỤNG" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #2ecc71;" text="IN TẠM TÍNH" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="139.0" layoutY="14.0" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #1abc9c;" text="IN CHẾ BIẾN" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="256.0" layoutY="14.0" prefHeight="31.0" prefWidth="101.0" style="-fx-background-color: #3498db;" text="CHUYỂN BÀN" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="371.0" layoutY="14.0" prefHeight="31.0" prefWidth="109.0" style="-fx-background-color: #2980b9;" text="GHÉP HÓA ĐƠN" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="501.0" layoutY="14.0" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #16a085;" text="TÁCH HÓA ĐƠN" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="446.0" layoutY="170.0" prefHeight="31.0" prefWidth="165.0" style="-fx-background-color: #e74c3c;" text="THANH TOÁN" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <TextField layoutX="109.0" layoutY="71.0" prefHeight="31.0" prefWidth="150.0" promptText="MÃ KHUYẾN MẠI" style="-fx-border-radius: 0px;">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="14.0" layoutY="76.0" text="KHUYẾN MẠI">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="112.0" text="VAT">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField alignment="CENTER_RIGHT" editable="false" layoutX="109.0" layoutY="107.0" prefHeight="31.0" prefWidth="150.0" text="10%">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="289.0" layoutY="76.0" text="CHIẾT KHẤU">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="393.0" layoutY="71.0" />
+                  <Label layoutX="289.0" layoutY="112.0" text="TỔNG TIỀN">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="393.0" layoutY="107.0" />
+               </children>
+            </AnchorPane>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="505.0" minHeight="10.0" prefHeight="173.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="585.0" minHeight="10.0" prefHeight="356.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="585.0" minHeight="10.0" prefHeight="228.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane gridLinesVisible="true" layoutX="960.0" layoutY="1.0" prefHeight="740.0" prefWidth="476.0">
+         <children>
+            <AnchorPane prefHeight="415.0" prefWidth="521.0">
+               <children>
+                  <JFXComboBox layoutX="12.0" layoutY="20.0" prefHeight="31.0" prefWidth="178.0" promptText="CHỌN THỰC ĐƠN" />
+                  <JFXTextField alignment="CENTER" layoutX="206.0" layoutY="20.0" maxWidth="222.0" minWidth="207.0" prefHeight="37.0" prefWidth="207.0" promptText="Tìm kiếm" />
+                  <JFXButton buttonType="RAISED" layoutX="419.0" layoutY="23.0" prefHeight="31.0" prefWidth="45.0" style="-fx-background-color: #2ac2d6;" text="Tìm" textFill="WHITE" />
+                  <TableView layoutX="14.0" layoutY="112.0" prefHeight="280.0" prefWidth="435.0">
+                     <columns>
+                        <TableColumn prefWidth="180.0" resizable="false" text="TÊN MÓN" />
+                        <TableColumn minWidth="0.0" prefWidth="95.0" resizable="false" text="DVT" />
+                        <TableColumn prefWidth="160.0" resizable="false" text="GIÁ" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <TableView layoutX="14.0" layoutY="100.0" prefHeight="175.0" prefWidth="435.0">
+                     <columns>
+                        <TableColumn prefWidth="180.0" resizable="false" text="TÊN DỊCH VỤ" />
+                        <TableColumn minWidth="0.0" prefWidth="95.0" resizable="false" text="DVT" />
+                        <TableColumn prefWidth="160.0" resizable="false" text="GIÁ" />
+                     </columns>
+                  </TableView>
+                  <JFXButton buttonType="RAISED" layoutX="420.0" layoutY="23.0" prefHeight="31.0" prefWidth="45.0" style="-fx-background-color: #2ac2d6;" text="Tìm" textFill="WHITE" />
+                  <JFXTextField alignment="CENTER" layoutX="209.0" layoutY="20.0" maxWidth="222.0" minWidth="202.0" prefHeight="37.0" prefWidth="202.0" promptText="Tìm kiếm" />
+                  <JFXComboBox layoutX="27.0" layoutY="23.0" prefHeight="31.0" prefWidth="178.0" promptText="CHỌN DỊCH VỤ" />
+                  <JFXButton buttonType="RAISED" layoutX="163.0" layoutY="282.0" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: #3498db;" text="THÊM DỊCH VỤ" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="961.0" minWidth="10.0" prefWidth="509.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="575.0" minHeight="10.0" prefHeight="415.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="320.0" minHeight="10.0" prefHeight="320.0" valignment="BASELINE" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <ScrollPane hbarPolicy="NEVER" layoutY="1.0" prefHeight="740.0" prefWidth="315.0">
+         <content>
+            <FlowPane prefHeight="740.0" prefWidth="315.0">
+               <children>
+                  <Pane layoutX="30.0" layoutY="210.0" prefHeight="42.0" prefWidth="265.0">
+                     <children>
+                        <Separator layoutX="6.0" layoutY="18.0" prefHeight="21.0" prefWidth="265.0" />
+                        <Label layoutX="89.0" layoutY="14.0" text="NGOÀI TRỜI" textFill="#9a9898">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="90.0" prefWidth="75.0">
+                     <children>
+                        <Label alignment="CENTER" layoutY="56.0" prefHeight="35.0" prefWidth="75.0" text="BÀN 10" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="61.0" fitWidth="66.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/table_on.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Pane layoutX="30.0" layoutY="30.0" prefHeight="90.0" prefWidth="75.0">
+                     <children>
+                        <Label alignment="CENTER" layoutY="59.0" prefHeight="35.0" prefWidth="75.0" text="BÀN 11" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="61.0" fitWidth="66.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/table_on.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Pane layoutX="105.0" layoutY="30.0" prefHeight="90.0" prefWidth="75.0">
+                     <children>
+                        <Label alignment="CENTER" layoutY="56.0" prefHeight="35.0" prefWidth="75.0" text="BÀN 10" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="61.0" fitWidth="66.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/table_off.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Pane layoutX="180.0" layoutY="30.0" prefHeight="90.0" prefWidth="75.0">
+                     <children>
+                        <Label alignment="CENTER" layoutY="56.0" prefHeight="35.0" prefWidth="75.0" text="BÀN 10" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="61.0" fitWidth="66.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/table_off.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Pane layoutX="180.0" layoutY="30.0" prefHeight="90.0" prefWidth="75.0">
+                     <children>
+                        <Label alignment="CENTER" layoutY="56.0" prefHeight="35.0" prefWidth="75.0" text="BÀN 10" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="61.0" fitWidth="66.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/table_off.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Pane prefHeight="42.0" prefWidth="265.0">
+                     <children>
+                        <Separator layoutX="6.0" layoutY="18.0" prefHeight="21.0" prefWidth="265.0" />
+                        <Label layoutX="89.0" layoutY="14.0" text="TRONG NHÀ" textFill="#9a9898">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="90.0" prefWidth="75.0">
+                     <children>
+                        <Label alignment="CENTER" layoutY="56.0" prefHeight="35.0" prefWidth="75.0" text="BÀN 10" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="61.0" fitWidth="66.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/table_off.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Pane prefHeight="90.0" prefWidth="75.0">
+                     <children>
+                        <Label alignment="CENTER" layoutY="56.0" prefHeight="35.0" prefWidth="75.0" text="BÀN 10" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="61.0" fitWidth="66.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/table_off.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Pane prefHeight="90.0" prefWidth="75.0">
+                     <children>
+                        <Label alignment="CENTER" layoutY="56.0" prefHeight="35.0" prefWidth="75.0" text="BÀN 10" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="61.0" fitWidth="66.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/table_off.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Pane prefHeight="90.0" prefWidth="75.0">
+                     <children>
+                        <Label alignment="CENTER" layoutY="59.0" prefHeight="35.0" prefWidth="75.0" text="BÀN 11" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="61.0" fitWidth="66.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/table_on.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Pane prefHeight="90.0" prefWidth="75.0">
+                     <children>
+                        <Label alignment="CENTER" layoutY="56.0" prefHeight="35.0" prefWidth="75.0" text="BÀN 10" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="61.0" fitWidth="66.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/table_on.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </FlowPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

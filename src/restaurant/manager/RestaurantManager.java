@@ -11,11 +11,13 @@ import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -31,13 +33,16 @@ public class RestaurantManager extends Application {
     private TAIKHOAN tk;
     private final double MINIMUM_WINDOW_WIDTH = 390.0;
     private final double MINIMUM_WINDOW_HEIGHT = 500.0;
-    
+    Double initMouseX;
+    Double initMouseY;
+    Double initStageX;
+    Double initStageY;
     @Override
     public void start(Stage primaryStage) throws Exception {
         try {
             stage = primaryStage;
-            stage.setTitle("FXML Login Sample");
-            Login();
+            stage.setTitle("Restaurant");
+            Main();
             primaryStage.show();
         } catch (Exception ex) {
             Logger.getLogger(restaurant.manager.RestaurantManager.class.getName()).log(Level.SEVERE, null, ex);
@@ -50,13 +55,12 @@ public class RestaurantManager extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    private void Login() {
+    private void Main() {
             
         try {
-            LOGINController login;
-            login = (LOGINController) replaceSceneContent("/View/LOGIN.fxml",Color.TRANSPARENT);
-            login.setapp(this);
-            stage.initStyle(StageStyle.TRANSPARENT);
+            MAINController main;
+            main = (MAINController) replaceSceneContent("/View/MAIN.fxml",Color.TRANSPARENT);
+            main.setapp(this);
             
         } catch (Exception ex) {
             Logger.getLogger(RestaurantManager.class.getName()).log(Level.SEVERE, null, ex);
@@ -68,14 +72,14 @@ public class RestaurantManager extends Application {
         InputStream in = restaurant.manager.RestaurantManager.class.getResourceAsStream(fxml);
         loader.setBuilderFactory(new JavaFXBuilderFactory());
         loader.setLocation(restaurant.manager.RestaurantManager.class.getResource(fxml));
-        AnchorPane page;
+        AnchorPane page ;
         try {
             page = (AnchorPane) loader.load(in);
         } finally {
             in.close();
         } 
         Scene scene = new Scene(page);
-        scene.setFill(t);
+        scene.setFill(t); 
         stage.setScene(scene);
         stage.sizeToScene();
         return (Initializable) loader.getController();

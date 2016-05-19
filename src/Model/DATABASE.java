@@ -146,6 +146,15 @@ public class DATABASE {
             return null;
         }
     }
+    public CallableStatement callstore(String spname){
+        try {
+            CallableStatement ts = conn.prepareCall(spname);
+            return ts;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
     public static void main(String[] args){
         DATABASE ts = new DATABASE();
         ts.get_connection();
