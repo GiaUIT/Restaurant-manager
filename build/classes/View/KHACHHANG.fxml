@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
@@ -7,8 +10,231 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.KHACHHANGController">
-    <stylesheets>
-        <URL value="@/Styles/khachhang.css"/>
-    </stylesheets>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane layoutX="-1.0" layoutY="-1.0" prefHeight="740.0" prefWidth="1431.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="KHÁCH HÀNG">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="6.0" layoutY="143.0" prefHeight="420.0" prefWidth="432.0">
+                           <children>
+                              <ScrollPane layoutX="24.0" layoutY="14.0" prefHeight="379.0" prefWidth="372.0">
+                                 <content>
+                                    <FlowPane hgap="1.0" prefHeight="364.0" prefWidth="350.0">
+                                       <children>
+                                          <Pane prefHeight="45.0" prefWidth="350.0">
+                                             <children>
+                                                <Label layoutX="133.0" layoutY="12.0" text="DANH SÁCH" textFill="#22c933" />
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="350.0">
+                                             <children>
+                                                <ImageView fitHeight="35.0" fitWidth="30.0" layoutX="34.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../resources/customer.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="12.0" prefHeight="21.0" prefWidth="139.0" text="Khách hàng Vip" textFill="#e84d39" />
+                                                <Label layoutX="216.0" layoutY="12.0" text="(10)" textFill="#e5a125" />
+                                             </children>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Pane>
+                                       </children>
+                                    </FlowPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="6.0" prefHeight="150.0" prefWidth="403.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" layoutX="46.0" layoutY="110.0" prefHeight="21.0" prefWidth="62.0" style="-fx-background-color: #2ecc71;" text="THÊM" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="127.0" layoutY="110.0" prefHeight="14.0" prefWidth="73.0" style="-fx-background-color: #1abc9c;" text="SỬA" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="222.0" layoutY="110.0" prefHeight="12.0" prefWidth="57.0" style="-fx-background-color: #e74c3c;" text="XÓA" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="303.0" layoutY="110.0" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #f1c40f;" text="LÀM MỚI" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label layoutX="96.0" layoutY="24.0" text="NHÓM KHÁCH HÀNG" textFill="#3498db">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <GridPane layoutX="438.0" layoutY="5.0" prefHeight="695.0" prefWidth="994.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXButton buttonType="RAISED" layoutX="36.0" layoutY="100.0" prefHeight="21.0" prefWidth="62.0" style="-fx-background-color: #2ecc71;" text="THÊM" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton buttonType="RAISED" layoutX="121.0" layoutY="100.0" prefHeight="14.0" prefWidth="73.0" style="-fx-background-color: #1abc9c;" text="SỬA" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton buttonType="RAISED" layoutX="210.0" layoutY="100.0" prefHeight="12.0" prefWidth="57.0" style="-fx-background-color: #e74c3c;" text="XÓA" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton buttonType="RAISED" layoutX="286.0" layoutY="100.0" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #f1c40f;" text="LÀM MỚI" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <Label layoutX="358.0" layoutY="23.0" text="DANH SÁCH KHÁCH HÀNG" textFill="#3498db">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField layoutX="567.0" layoutY="94.0" promptText="TÌM KIẾM" />
+                                    <JFXButton buttonType="RAISED" layoutX="754.0" layoutY="100.0" prefHeight="21.0" prefWidth="62.0" style="-fx-background-color: #2ecc71;" text="TÌM" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton buttonType="RAISED" layoutX="853.0" layoutY="100.0" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #c66b23;" text="NÂNG HẠNG" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXComboBox layoutX="385.0" layoutY="97.0" prefHeight="31.0" prefWidth="167.0" promptText="TÌM KIẾM THEO" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="556.0" prefWidth="841.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <TableView layoutX="6.0" prefHeight="503.0" prefWidth="933.0">
+                                       <columns>
+                                          <TableColumn prefWidth="36.0" text="STT" />
+                                          <TableColumn text="MÃ KH" />
+                                          <TableColumn prefWidth="209.0" text="TÊN KHÁCH HÀNG" />
+                                          <TableColumn prefWidth="150.0" text="SDT" />
+                                          <TableColumn minWidth="0.0" prefWidth="206.0" text="ĐỊA CHỈ" />
+                                          <TableColumn minWidth="0.0" prefWidth="251.0" text="GHI CHÚ" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="343.0" minHeight="10.0" prefHeight="153.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="562.0" minHeight="10.0" prefHeight="542.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <Label layoutX="77.0" layoutY="563.0" text="THÔNG TIN NHÓM KHÁCH HÀNG" textFill="#3498db">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="33.0" layoutY="599.0" text="TỔNG MỨC THANH TOÁN CẦN ĐẠT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="33.0" layoutY="637.0" text="KHUYẾN MẠI">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="244.0" layoutY="597.0" text="20000000 ĐỒNG" textFill="#d62f2f" />
+                        <Label layoutX="125.0" layoutY="635.0" prefHeight="21.0" prefWidth="100.0" text="GIẢM 15%" textFill="#d62f2f" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="KHUYẾN MẠI">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="94.0" layoutY="3.0" prefHeight="695.0" prefWidth="1244.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXButton buttonType="RAISED" layoutX="267.0" layoutY="100.0" prefHeight="21.0" prefWidth="62.0" style="-fx-background-color: #2ecc71;" text="THÊM" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton buttonType="RAISED" layoutX="352.0" layoutY="100.0" prefHeight="14.0" prefWidth="73.0" style="-fx-background-color: #1abc9c;" text="SỬA" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton buttonType="RAISED" layoutX="441.0" layoutY="100.0" prefHeight="12.0" prefWidth="57.0" style="-fx-background-color: #e74c3c;" text="XÓA" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton buttonType="RAISED" layoutX="517.0" layoutY="100.0" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #f1c40f;" text="LÀM MỚI" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <Label layoutX="463.0" layoutY="23.0" text="DANH SÁCH KHUYẾN MẠI" textFill="#3498db">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField layoutX="602.0" layoutY="94.0" promptText="TÌM KIẾM" />
+                                    <JFXButton buttonType="RAISED" layoutX="789.0" layoutY="100.0" prefHeight="21.0" prefWidth="62.0" style="-fx-background-color: #2ecc71;" text="TÌM" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="556.0" prefWidth="841.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <TableView layoutX="31.0" layoutY="14.0" prefHeight="503.0" prefWidth="1127.0">
+                                       <columns>
+                                          <TableColumn prefWidth="36.0" text="STT" />
+                                          <TableColumn text="MÃ KM" />
+                                          <TableColumn prefWidth="209.0" text="TÊN KHUYẾN MẠI" />
+                                          <TableColumn prefWidth="150.0" text="NHÓM ÁP DỤNG" />
+                                          <TableColumn minWidth="0.0" prefWidth="206.0" text="MỨC KHUYẾN MẠI" />
+                                          <TableColumn minWidth="0.0" prefWidth="251.0" text="THỚI GIAN BẮT ĐẦU" />
+                                          <TableColumn prefWidth="193.0" text="THỚI GIAN KẾT THÚC" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="343.0" minHeight="10.0" prefHeight="153.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="562.0" minHeight="10.0" prefHeight="542.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
 </AnchorPane>

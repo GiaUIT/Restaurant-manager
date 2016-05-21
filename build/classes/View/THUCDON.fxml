@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
@@ -7,8 +10,171 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.THUCDONController">
-    <stylesheets>
-        <URL value="@/Styles/thucdon.css"/>
-    </stylesheets>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.THUCDONController">
+   <children>
+      <GridPane layoutX="410.0" layoutY="14.0" prefHeight="735.0" prefWidth="1021.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="48.0" layoutY="101.0" prefHeight="21.0" prefWidth="62.0" style="-fx-background-color: #2ecc71;" text="THÊM" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="133.0" layoutY="101.0" prefHeight="14.0" prefWidth="73.0" style="-fx-background-color: #1abc9c;" text="SỬA" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="222.0" layoutY="101.0" prefHeight="12.0" prefWidth="57.0" style="-fx-background-color: #e74c3c;" text="XÓA" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="298.0" layoutY="101.0" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #f1c40f;" text="LÀM MỚI" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="244.0" layoutY="24.0" text="DANH SÁCH MÓN" textFill="#3498db">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField layoutX="383.0" layoutY="95.0" promptText="TÌM KIẾM" />
+                  <JFXButton buttonType="RAISED" layoutX="570.0" layoutY="101.0" prefHeight="21.0" prefWidth="62.0" style="-fx-background-color: #2ecc71;" text="TÌM" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="556.0" prefWidth="841.0" GridPane.rowIndex="1">
+               <children>
+                  <TableView layoutX="6.0" prefHeight="508.0" prefWidth="628.0">
+                     <columns>
+                        <TableColumn prefWidth="36.0" text="STT" />
+                        <TableColumn text="MÃ MÓN" />
+                        <TableColumn prefWidth="209.0" text="TÊN MÓN" />
+                        <TableColumn prefWidth="75.0" text="DVT" />
+                        <TableColumn prefWidth="75.0" text="GIÁ" />
+                        <TableColumn prefWidth="168.0" text="GHI CHÚ" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="99.0" prefHeight="21.0" prefWidth="62.0" style="-fx-background-color: #2ecc71;" text="THÊM" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="104.0" layoutY="99.0" prefHeight="14.0" prefWidth="73.0" style="-fx-background-color: #1abc9c;" text="SỬA" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="196.0" layoutY="99.0" prefHeight="12.0" prefWidth="57.0" style="-fx-background-color: #e74c3c;" text="XÓA" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="270.0" layoutY="99.0" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #f1c40f;" text="LÀM MỚI" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="84.0" layoutY="25.0" text="DANH SÁCH NGUYÊN LIỆU" textFill="#3498db">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="571.0" prefWidth="370.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <TableView prefHeight="510.0" prefWidth="360.0">
+                     <columns>
+                        <TableColumn prefWidth="36.0" text="STT" />
+                        <TableColumn prefWidth="55.0" text="MÃ NL" />
+                        <TableColumn prefWidth="126.0" text="TÊN NL" />
+                        <TableColumn prefWidth="75.0" text="DVT" />
+                        <TableColumn prefWidth="75.0" text="SL" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="905.0" minWidth="10.0" prefWidth="646.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="375.0" minWidth="10.0" prefWidth="375.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="164.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="636.0" minHeight="10.0" prefHeight="571.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <AnchorPane fx:id="left" layoutY="6.0" prefHeight="730.0" prefWidth="424.0">
+         <children>
+            <AnchorPane prefHeight="150.0" prefWidth="403.0">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="46.0" layoutY="110.0" prefHeight="21.0" prefWidth="62.0" style="-fx-background-color: #2ecc71;" text="THÊM" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="127.0" layoutY="110.0" prefHeight="14.0" prefWidth="73.0" style="-fx-background-color: #1abc9c;" text="SỬA" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="222.0" layoutY="110.0" prefHeight="12.0" prefWidth="57.0" style="-fx-background-color: #e74c3c;" text="XÓA" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="303.0" layoutY="110.0" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #f1c40f;" text="LÀM MỚI" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="96.0" layoutY="24.0" text="DANH SÁCH THỰC ĐƠN" textFill="#3498db">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="7.0" layoutY="159.0" prefHeight="571.0" prefWidth="432.0" GridPane.rowIndex="1">
+               <children>
+                  <ScrollPane layoutX="24.0" layoutY="14.0" prefHeight="504.0" prefWidth="372.0">
+                     <content>
+                        <FlowPane hgap="1.0" prefHeight="495.0" prefWidth="350.0">
+                           <children>
+                              <Pane prefHeight="45.0" prefWidth="350.0">
+                                 <children>
+                                    <Label layoutX="133.0" layoutY="12.0" text="DANH SÁCH" textFill="#e74c3c" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="350.0">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="30.0" layoutX="34.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/book.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="76.0" layoutY="12.0" text="Thực đơn buổi sáng" textFill="#e84d39" />
+                                    <Label layoutX="216.0" layoutY="12.0" text="(10)" textFill="#e5a125" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </FlowPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
